@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { listings } from "@/lib/listings";
 import Link from "next/link";
+import config from "@/lib/config.json";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
                   <div className="card bg-base-300 w-96 shadow-sm">
                     <figure>
                       <Image
-                        src={listing.imageUrl}
+                        src={`${config.sitepath}${listing.imageUrl}`}
                         alt={listing.name}
                         width={600}
                         height={600}
@@ -45,7 +46,7 @@ export default function Home() {
                   <div key={listing.id} className="card bg-base-300 w-96 shadow-sm">
                     <figure>
                       <Image
-                        src={listing.imageUrl}
+                        src={`${config.sitepath}${listing.imageUrl}`}
                         alt={listing.name}
                         width={600}
                         height={600}

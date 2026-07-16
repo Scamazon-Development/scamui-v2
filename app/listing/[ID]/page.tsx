@@ -1,6 +1,7 @@
 import { listings } from "@/lib/listings";
 import Image from "next/image";
 import Link from "next/link";
+import config from "@/lib/config.json";
 
 export async function generateStaticParams() {
     return listings.map((listing) => ({
@@ -22,7 +23,7 @@ export default async function ListingPage({ params }: { params: Promise<{ ID: st
     return (
         <div className="flex flex-col flex-1 min-h-0 gap-4">
             <div className="flex flex-row justify-between gap-4">
-                <Image src={listing.imageUrl} alt={listing.name} width={400} height={400} />
+                <Image src={`${config.sitepath}${listing.imageUrl}`} alt={listing.name} width={400} height={400} />
                 <div className="card bg-base-200 w-full shadow-sm">
                     <div className="card-body flex flex-col">
                         <h2 className="card-title">{listing.name}</h2>
