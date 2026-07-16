@@ -2,6 +2,12 @@ import { listings } from "@/lib/listings";
 import Image from "next/image";
 import Link from "next/link";
 
+export async function generateStaticParams() {
+    return listings.map((listing) => ({
+        ID: listing.id,
+    }));
+}
+
 export default async function ListingPage({ params }: { params: Promise<{ ID: string }> }) {
     const { ID } = await params;
 
