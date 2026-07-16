@@ -41,6 +41,7 @@ jobs:
             exit 0
           elif [ -f "${{ github.workspace }}/package.json" ]; then
             npm -g install pnpm
+            pnpm env use --global lts
             echo "manager=pnpm" >> $GITHUB_OUTPUT
             echo "command=i" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
