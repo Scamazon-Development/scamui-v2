@@ -20,7 +20,7 @@ export const listings: Listing[] = [
     {
         id: "pizza",
         name: "Pizza",
-        price: "696969696969696969.69",
+        price: "7492018302.13",
         description: "An pizza that is high in tastiness and nutrition, very good and we reccomend eating it, packed with toppings and the warning is mandated by the goverment but we reccomend ignoring it. WARNING: This product is not intended for consumption and contains multiple harmful substances including Dihydrogen Monoxide, (2R,3S,4R,5R)-2,3,4,5,6-pentahydroxyhexanal and Acedic acid.",
         imageUrl: "/images/products/pizza.jpeg",
         category: "Food"
