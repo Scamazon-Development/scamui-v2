@@ -48,5 +48,13 @@ export const listings: Listing[] = [
         description: "A racing game that is so good you will stop playing before you start, you will never want to play or even want to buy this game but it lives up to scamazons high standards and we recommend it, it's a very good game and we reccomend it.",
         imageUrl: "/images/products/little-hero-adventure-racing.jpg",
         category: "Tech"
+    },
+    {
+        id: "waterpods-max",
+        name: "Scamazon WaterPods Max",
+        price: "999999999999999999999999999999999999999.99",
+        description: "The ultimate wireless earbuds that deliver iron-clear sound and the worst software you could possibly imagine, perfect for physocpaths like the CEO of Scamazon.",
+        imageUrl: "/images/products/waterpods-max.jpeg",
+        category: "Tech"
     }
 ]
