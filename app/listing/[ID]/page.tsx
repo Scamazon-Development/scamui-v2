@@ -24,13 +24,13 @@ export default async function ListingPage({ params }: { params: Promise<{ ID: st
         <div className="flex flex-col flex-1 min-h-0 gap-4">
             <div className="flex flex-row justify-between gap-4">
                 <Image src={`${config.sitepath}${listing.imageUrl}`} alt={listing.name} width={400} height={400} />
-                <div className="card bg-base-200 w-full shadow-sm">
+                <div className="card bg-base-200 flex-1 basis-0 min-w-0 shadow-sm">
                     <div className="card-body flex flex-col">
                         <h2 className="card-title">{listing.name}</h2>
                         <p>${listing.price}</p>
                     </div>
                 </div>
-                <div className="card bg-base-200 w-full h-fit shadow-sm gap-4 p-4">
+                <div className="card bg-base-200 flex-1 basis-0 min-w-0 h-fit shadow-sm gap-4 p-4">
                     <h1 className="text-2xl font-bold">${listing.price}</h1>
                     <input type="number" placeholder="Quantity" className="input input-bordered w-full" />
                     <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="btn btn-primary">
