@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # dependent on deployment
-lib/config.json
+/lib/config.json
