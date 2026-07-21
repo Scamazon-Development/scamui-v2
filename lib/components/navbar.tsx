@@ -1,8 +1,12 @@
 "use client";
 
 import Link from "next/link";
-
+import { useEffect, useState } from "react";
 export default function Navbar() {
+    const [isSubscribed, setIsSubscribed] = useState(false);
+    useEffect(() => {
+        setIsSubscribed(localStorage.getItem("crimeSubscribed") === "true");
+    }, []);
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="flex-1">
@@ -13,15 +17,11 @@ export default function Navbar() {
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link href="/">Home</Link></li>
-                    <li>
-                        <details>
-                            <summary>Crime</summary>
-                            <ul className="bg-base-100 rounded-t-none p-2 -mx-10 z-99">
-                                <li><a>Placeholder 1</a></li>
-                                <li><a>Placeholder 2</a></li>
-                            </ul>
-                        </details>
-                    </li>
+                    {isSubscribed ? (
+                        <li><Link href="/crime/crime-video">Crime Video</Link></li>
+                    ) : (
+                        <li><Link href="/crime/get-crime">Get Crime</Link></li>
+                    )}
                 </ul>
             </div>
         </div>

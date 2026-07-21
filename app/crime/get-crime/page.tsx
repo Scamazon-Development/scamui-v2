@@ -1,4 +1,9 @@
+"use client"
 export default function getCrimePage() {
+    function subscribeToCrime() {
+        localStorage.setItem("crimeSubscribed", "true");
+        location.href = "./confirmation";
+    }
     return (
         <div>
             <div className="hero bg-base-200 min-h-screen">
@@ -86,7 +91,9 @@ export default function getCrimePage() {
                                 </li>
                             </ul>
                             <div className="mt-auto">
-                                <button className="btn btn-primary btn-block">Subscribe</button>
+                                <button className="btn btn-primary btn-block" onClick={subscribeToCrime}>
+                                    Subscribe
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -124,7 +131,9 @@ export default function getCrimePage() {
                                 </li>
                             </ul>
                             <div className="mt-auto">
-                                <button className="btn btn-primary btn-block">Subscribe</button>
+                                <button className="btn btn-primary btn-block" onClick={subscribeToCrime}>
+                                    Subscribe
+                                </button>
                             </div>
                         </div>
                     </div>
