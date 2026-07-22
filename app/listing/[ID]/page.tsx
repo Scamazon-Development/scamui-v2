@@ -21,8 +21,8 @@ export default async function ListingPage({ params }: { params: Promise<{ ID: st
     }
 
     return (
-        <div className="flex flex-col flex-1 min-h-0 gap-4">
-            <div className="flex flex-row justify-between gap-4">
+        <div className="flex flex-col flex-1 min-h-0 gap-4 flex-wrap">
+            <div className="flex flex-col sm:flex-row justify-between gap-4">
                 <Image src={`${config.sitepath}${listing.imageUrl}`} alt={listing.name} width={400} height={400} />
                 <div className="card bg-base-200 flex-1 basis-0 min-w-0 shadow-sm">
                     <div className="card-body flex flex-col">

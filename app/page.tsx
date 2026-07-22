@@ -10,7 +10,7 @@ export default function Home() {
         <div className="card-body">
           <h1 className="card-title text-2xl">Best Food You Could Ever Find</h1>
           <br />
-          <div className="flex flex-row overflow-x-scroll gap-4">
+          <div className="flex flex-row sm:overflow-x-scroll gap-4 flex-wrap">
             {listings
               .filter((listing) => listing.category === "Food")
               .map((listing) => (
@@ -38,7 +38,7 @@ export default function Home() {
         <div className="card-body">
           <h1 className="card-title text-2xl">Supreme Tech For All Of Your Tech Needs</h1>
           <br />
-          <div className="flex flex-row overflow-x-scroll gap-4">
+          <div className="flex flex-row sm:overflow-x-scroll gap-4 flex-wrap">
             {listings
               .filter((listing) => listing.category === "Tech")
               .map((listing) => (
